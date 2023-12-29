@@ -4,8 +4,12 @@ const userMiddleware = require("../middleware/user");
 
 // User Routes
 router.post('/signup', (req, res) => {
-    // Implement user signup logic
-});
+
+    res.json({
+        message: "User signup successful"
+    });
+    })
+
 
 router.get('/courses', (req, res) => {
     // Implement listing all courses logic
