@@ -10,7 +10,9 @@ import { client } from "..";
  * }
  */
 export async function createTodo(userId: number, title: string, description: string) {
-    
+    const query = `
+    INSERT INTO todos (userId, title , description) VALUES($1 , $2 ,$3);
+    `
 }
 /*
  * mark done as true for this specific todo.
