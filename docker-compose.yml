@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    # Your application definition (replace with your app details)
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: your_password  # Set a strong password for security
+      POSTGRES_USER: postgres
+      POSTGRES_DB: your_database_name
+    volumes:
+      - postgres-data:/var/lib/postgresql/data  # Persistent storage for data
+
+volumes:
+  postgres-data:  # Define a volume for database data
